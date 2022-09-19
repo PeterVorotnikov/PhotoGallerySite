@@ -1,15 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     background-color: #0B061B;
 }
 
 .wrapper {
     width: 1200px;
+    height: 100%;
     margin: 0 auto;
 }
 
 /*header style*/
 
-.header{
+.header {
     margin-bottom: 32px;
 }
 
@@ -66,7 +71,7 @@ html {
     text-decoration: none;
 }
 
-.header__login{
+.header__login {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -78,10 +83,69 @@ html {
 
 /*hline style*/
 
-.hline{
+.hline {
     width: 100%;
     height: 1px;
     background: url(../img/hline.png);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 30px;
+}
+
+/*add-panel style*/
+
+.add-panel {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 40px;
+}
+
+.add-panel__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-panel__date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: #ECECEC;
+}
+
+.add-panel__button {
+    display: block;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 191px;
+    background: #9747FF;
+    border-radius: 10px;
+}
+
+.add-panel__button-container {
+    margin: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-panel__button-plus {
+    height: 100%;
+    width: 20px;
+    background: url(../img/plus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.add-panel__button-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color:white;
 }
