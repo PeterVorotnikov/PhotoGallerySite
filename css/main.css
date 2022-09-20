@@ -6,7 +6,16 @@ html {
     background-color: #0B061B;
 }
 
-a:focus{
+img{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+}
+
+a:focus {
     outline: none;
 }
 
@@ -152,5 +161,68 @@ a:focus{
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    color:white;
+    color: white;
+}
+
+/*content style*/
+
+.content {
+    margin-bottom: 40px;
+    height: 895px;
+}
+
+.content__container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.content__element {
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 285px;
+    height: 285px;
+    overflow: hidden;
+}
+.content__element:nth-child(4n){
+    margin-right: 0px;
+}
+
+
+.content__image {
+    display: block;
+}
+
+.content__image-name {
+    position: absolute;
+    top: 220px;
+    left: 20px;
+    width: 245px;
+    height: 26px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    overflow: hidden;
+    color: white;
+}
+
+.content__image-date {
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    width: 184px;
+    height: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+    opacity: 0.7;
 }
