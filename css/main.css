@@ -180,6 +180,9 @@ a:focus {
 }
 
 .content__element {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
     position: relative;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -187,12 +190,12 @@ a:focus {
     width: 285px;
     height: 285px;
     overflow: hidden;
+    text-align: left;
 }
 
 .content__element:nth-child(4n) {
     margin-right: 0px;
 }
-
 
 .content__image {
     display: block;
