@@ -205,7 +205,7 @@ a:focus {
 
 .content {
     margin-bottom: 40px;
-    height: 895px;
+    min-height: 895px;
 }
 
 .content__container {
