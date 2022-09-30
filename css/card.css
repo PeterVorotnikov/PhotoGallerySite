@@ -3,7 +3,7 @@
     font-style: normal;
     margin: 0px;
     border: none;
-    bottom: 0px;
+    padding: 0px;
     text-align: left;
 }
 
@@ -14,6 +14,7 @@ html {
 
 button {
     cursor: pointer;
+    background: transparent;
 }
 
 a {
@@ -221,13 +222,6 @@ a {
     border-radius: 16px;
 }
 
-.main__submit-panel {
-    width: 320px;
-    height: 100%;
-    background: #180F35;
-    border-radius: 16px;
-}
-
 .main__rating-avg__header {
     height: 20px;
     margin-left: 68px;
@@ -258,15 +252,32 @@ a {
     color: #989898;
 }
 
+.main__submit-panel {
+    width: 320px;
+    height: 100%;
+    background: #180F35;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.main__submit-panel-done{
+    width: 320px;
+    height: 142px;
+    background: #180F35;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
 .main__sumbit-panel__header {
     height: 20px;
+    margin: 0px auto;
     margin-top: 30px;
-    margin-left: 75px;
     margin-bottom: 30px;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: #ececec;
+    text-align: center;
 }
 
 .main__star-container {
@@ -300,6 +311,47 @@ a {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
+    color: white;
+}
+
+.main__submit-button-active {
+    width: 109px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 105px;
+    background: #9747FF;
+    opacity: 1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}
+
+.main__submit-button-preload {
+    width: 139px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 90px;
+    display: flex;
+    justify-content: flex-start;
+    background: #9747FF;
+}
+
+.main__preload-picture {
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    margin-right: 10px;
+    background: url(../img/preload.svg);
+}
+
+.main__submit-button-preload-text {
+    height: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
     color: white;
 }
 
