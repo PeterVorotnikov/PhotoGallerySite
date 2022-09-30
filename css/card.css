@@ -280,6 +280,18 @@ a {
     text-align: center;
 }
 
+.main__sumbit-panel__header-done {
+    height: 20px;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #989898;
+    text-align: center;
+}
+
 .main__star-container {
     width: 224px;
     height: 32px;
@@ -289,11 +301,22 @@ a {
     justify-content: flex-start;
 }
 
-.main__star-button {
+.main__star-button-unactive {
     width: 32px;
     height: 32px;
     margin-right: 16px;
-    background: transparent;
+    background: url(../img/star_unactive.svg);
+}
+
+.main__star-button-active{
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    background: url(../img/star_active.svg);
+}
+
+.main__star-button-done{
+    cursor: default;
 }
 
 .main__star-button:last-child {

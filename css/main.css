@@ -51,7 +51,7 @@ a:focus {
     width: 40px;
     height: 40px;
     margin-right: 18px;
-    background: url(../img/logo.png);
+    background: url(../img/logo.svg);
     background-repeat: no-repeat;
     background-position: 0px 0px;
 }
@@ -187,7 +187,7 @@ a:focus {
 .add-panel__button-plus {
     height: 100%;
     width: 20px;
-    background: url(../img/plus.png);
+    background: url(../img/plus.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -298,7 +298,7 @@ a:focus {
     height: 20px;
     margin-left: 532px;
     margin-top: 20px;
-    background: url(../img/arrow.png);
+    background: url(../img/arrow_down.svg);
 }
 
 .show-more__text {
