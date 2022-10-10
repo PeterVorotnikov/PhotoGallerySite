@@ -28,6 +28,9 @@ a {
     margin: 0px auto;
 }
 
+
+
+
 /*header style*/
 
 .header {
@@ -91,4 +94,115 @@ a {
     width: 100%;
     margin-bottom: 30px;
     background: url(../img/hline.png);
+}
+
+/*main style*/
+
+main {
+    width: 100%;
+    height: 1242px;
+}
+
+.main-unactive__container {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-unactive__photo {
+    width: 260px;
+    height: 260px;
+    margin-right: 40px;
+    border-radius: 20px;
+    border: 2px dashed #585858;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.main-unactive__photo__plus {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 20px;
+    background: url(../img/purple_plus.svg);
+}
+
+.main-unactive__photo__header {
+    width: 182px;
+    height: 28px;
+    margin: 0px auto;
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #585858;
+}
+
+.main-unactive__photo__info {
+    width: 204px;
+    height: 40px;
+    margin: 0px auto;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #585858;
+    text-align: center;
+}
+
+.main-unactive__info-container {
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-unactive__info-container__header {
+    height: 60px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    color: #585858;
+}
+
+.main-unactive__submit-panel {
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-unactive__submit-button {
+    cursor: default;
+    width: 260px;
+    height: 60px;
+    margin-right: 32px;
+    border-radius: 10px;
+    background: #9747FF;
+    opacity: 0.3;
+    color: white;
+    text-align: center;
+}
+
+.main-unactive__requirements-panel {
+    margin: auto 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-unactive__requirements-panel__logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background: url(../img/info.svg);
+}
+
+.main-unactive__requirements-panel__text {
+    height: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #585858;
 }
