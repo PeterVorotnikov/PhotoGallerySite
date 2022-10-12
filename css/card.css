@@ -252,27 +252,21 @@ a {
     color: #989898;
 }
 
-.main__submit-panel {
+.main__submit-panel-unactive {
     width: 320px;
-    height: 100%;
+    height: 243px;
     background: #180F35;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     border-radius: 16px;
-    overflow: hidden;
+    display: none;
 }
 
-.main__submit-panel-done{
-    width: 320px;
-    height: 142px;
-    background: #180F35;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.main__sumbit-panel__header {
+.main__submit-panel-unactive__header {
+    width: 100%;
     height: 20px;
-    margin: 0px auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -280,19 +274,7 @@ a {
     text-align: center;
 }
 
-.main__sumbit-panel__header-done {
-    height: 20px;
-    margin: 0px auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #989898;
-    text-align: center;
-}
-
-.main__star-container {
+.main__submit-panel-unactive__star-container {
     width: 224px;
     height: 32px;
     margin: 0px auto;
@@ -301,35 +283,30 @@ a {
     justify-content: flex-start;
 }
 
-.main__star-button-unactive {
+.main__submit-panel-unactive__star {
     width: 32px;
     height: 32px;
     margin-right: 16px;
-    background: url(../img/star_unactive.svg);
 }
 
-.main__star-button-active{
-    width: 32px;
-    height: 32px;
-    margin-right: 16px;
-    background: url(../img/star_active.svg);
-}
-
-.main__star-button-done{
-    cursor: default;
-}
-
-.main__star-button:last-child {
+.main__submit-panel-unactive__star:last-child {
     margin-right: 0px;
 }
 
-.main__submit-button-unactive {
+.main__submit-panel-unactive__button {
+    cursor: default;
     width: 109px;
     height: 60px;
+    margin: 0px auto;
     border-radius: 10px;
-    margin-left: 105px;
     background: #9747FF;
     opacity: 0.3;
+}
+
+.main__submit-panel-unactive__button__text {
+    width: 100%;
+    height: 20px;
+    margin: auto;
     text-align: center;
     font-weight: 600;
     font-size: 16px;
@@ -337,45 +314,187 @@ a {
     color: white;
 }
 
-.main__submit-button-active {
-    width: 109px;
-    height: 60px;
-    border-radius: 10px;
-    margin-left: 105px;
-    background: #9747FF;
-    opacity: 1;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: white;
+
+.main__submit-panel-active {
+    width: 320px;
+    height: 243px;
+    background: #180F35;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 16px;
 }
 
-.main__submit-button-preload {
-    width: 139px;
-    height: 60px;
-    border-radius: 10px;
-    margin-left: 90px;
+.main__submit-panel-active__header {
+    width: 100%;
+    height: 20px;
+    margin: 30px auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ececec;
+    text-align: center;
+}
+
+.main__submit-panel-active__star-container {
+    width: 224px;
+    height: 32px;
+    margin: 0px auto;
+    margin-bottom: 30px;
     display: flex;
     justify-content: flex-start;
+}
+
+.main__submit-panel-active__star {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.main__submit-panel-active__star:last-child {
+    margin-right: 0px;
+}
+
+.main__submit-panel-active__button {
+    width: 109px;
+    height: 60px;
+    margin: 0px auto;
+    border-radius: 10px;
     background: #9747FF;
 }
 
-.main__preload-picture {
+.main__submit-panel-active__button__text {
+    width: 100%;
+    height: 20px;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}
+
+
+.main__submit-panel-load {
+    width: 320px;
+    height: 243px;
+    background: #180F35;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 16px;
+    display: none;
+}
+
+.main__submit-panel-load__header {
+    width: 100%;
+    height: 20px;
+    margin: 30px auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ececec;
+    text-align: center;
+}
+
+.main__submit-panel-load__star-container {
+    width: 224px;
+    height: 32px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main__submit-panel-load__star {
+    cursor: default;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.main__submit-panel-load__star:last-child {
+    margin-right: 0px;
+}
+
+.main__submit-panel-load__button {
+    cursor: default;
+    width: 139px;
+    height: 60px;
+    margin: 0px auto;
+    border-radius: 10px;
+    background: #9747FF;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main__submit-panel-load__button__load-icon{
     width: 20px;
     height: 20px;
-    margin: 20px;
-    margin-right: 10px;
+    margin: auto 10px auto 20px;
     background: url(../img/preload.svg);
 }
 
-.main__submit-button-preload-text {
+.main__submit-panel-load__button__text {
     height: 20px;
+    margin: auto 0px;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    margin-top: 20px;
     color: white;
+}
+
+
+.main__submit-panel-done {
+    width: 320px;
+    height: 142px;
+    background: #180F35;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 16px;
+    display: none;
+}
+
+.main__submit-panel-done__header {
+    width: 100%;
+    height: 20px;
+    margin: 30px auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #989898;
+    text-align: center;
+}
+
+.main__submit-panel-done__star-container {
+    width: 224px;
+    height: 32px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main__submit-panel-done__star {
+    cursor: default;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.main__submit-panel-done__star:last-child {
+    margin-right: 0px;
+}
+
+
+
+.star-unactive {
+    background: url(../img/star_unactive.svg);
+}
+
+.star-active {
+    background: url(../img/star_active.svg);
 }
 
 /*footer style*/
