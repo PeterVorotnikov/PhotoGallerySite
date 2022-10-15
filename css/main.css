@@ -211,9 +211,10 @@ a:focus {
 .content__container {
     height: auto;
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .content__element {
@@ -221,17 +222,11 @@ a:focus {
     border: 0px;
     padding: 0px;
     position: relative;
-    margin-right: 20px;
-    margin-bottom: 20px;
     border-radius: 20px;
     width: 285px;
     height: 285px;
     overflow: hidden;
     text-align: left;
-}
-
-.content__element:nth-child(4n) {
-    margin-right: 0px;
 }
 
 .content__image {
