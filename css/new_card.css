@@ -425,3 +425,156 @@ main {
         margin-bottom: 20px;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    main{
+        height: 676px;
+    }
+
+    .wrapper{
+        max-width: 280px;
+    }
+
+    .header__photogallery{
+        display: none;
+    }
+
+    .hello-word{
+        display: none;
+    }
+
+    .header{
+        margin: 20px 0px;
+    }
+
+    .header__hline{
+        margin-bottom: 30px;
+    }
+
+
+    .main-unactive__container{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .main-unactive__photo{
+        width: 280px;
+        height: 280px;
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+
+    .main-unactive__info-container__header{
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+
+    .main-unactive__submit-button{
+        margin: 0px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .main-unactive__requirements-panel__logo{
+        width: 20px;
+        height: 20px;
+        margin: auto 0px;
+        margin-right: 12px;
+    }
+
+    .main-unactive__requirements-panel__text{
+        width: 200px;
+        height: auto;
+    }
+
+
+    .main-active__container{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .main-active__photo-container{
+        width: 280px;
+        height: 280px;
+        margin-bottom: 30px;
+    }
+
+    .main-active__photo-image{
+        width: 280px;
+        height: 280px;
+    }
+
+    .main-active__delete-button{
+        top: 20px;
+        right: 20px;
+        left: auto;
+    }
+
+    .main-active__info-container__header{
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+
+    .main-active__submit-button{
+        margin: 0px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .main-active__requirements-panel__logo{
+        width: 20px;
+        height: 20px;
+        margin: auto 0px;
+        margin-right: 12px;
+    }
+
+    .main-active__requirements-panel__text{
+        height: auto;
+        width: 200px;
+    }
+
+
+    .main-active__container-load{
+        height: auto;
+        flex-direction: column;
+    }
+
+
+
+
+
+
+
+
+
+    .footer__hline{
+        margin-bottom: 20px;
+    }
+
+    .hline{
+        margin-bottom: 20px;
+    }
+
+    .footer{
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .footer__container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .footer__link{
+        margin: 20px auto;
+        margin-top: 0px;
+    }
+
+    .footer__info{
+        margin: 0px auto;
+    }
+}
