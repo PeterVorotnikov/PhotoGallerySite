@@ -2,6 +2,23 @@
     box-sizing: border-box;
 }
 
+* {
+    font-family: 'Inter';
+    font-style: normal;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    text-align: left;
+}
+
+:focus{
+    outline: dashed 2px white;
+}
+
+a:focus{
+    outline: dashed 2px white;
+}
+
 html {
     background-color: #0B061B;
 }
@@ -13,10 +30,6 @@ img {
     font-size: 20px;
     line-height: 24px;
     color: white;
-}
-
-a:focus {
-    outline: none;
 }
 
 .wrapper {

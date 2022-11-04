@@ -7,6 +7,9 @@
     text-align: left;
 }
 
+:focus{
+    outline: dashed 2px white;
+}
 
 html {
     background: #0B061B;
