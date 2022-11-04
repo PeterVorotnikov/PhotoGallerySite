@@ -11,12 +11,17 @@
     text-align: left;
 }
 
-:focus{
+:focus {
     outline: dashed 2px white;
 }
 
-a:focus{
+a:focus {
     outline: dashed 2px white;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
 }
 
 html {
@@ -265,7 +270,7 @@ img {
     color: white;
 }
 
-.content__image-clock-icon{
+.content__image-clock-icon {
     width: 12px;
     height: 12px;
     margin: auto 0px;
@@ -381,6 +386,69 @@ img {
 
 
 
+/*form*/
+
+.form {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.form__background {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+}
+
+.form__window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__window__change-mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 80px;
+    margin-bottom: 30px;
+}
+
+.change-mode__button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    width: 208px;
+    height: 39px;
+}
+
+.change-mode__button__registration{
+    margin-right: 30px;
+}
+
+.change-mode__button__active{
+    color: #181818;
+}
+
+.change-mode__button__unactive{
+    color: #B9B9B9;
+}
+
+
+
 
 /*media*/
 
@@ -398,7 +466,7 @@ img {
         height: 216px;
     }
 
-    .content__image-name{
+    .content__image-name {
         width: 176px;
     }
 
@@ -436,7 +504,7 @@ img {
         display: none;
     }
 
-    .hello-word{
+    .hello-word {
         display: none;
     }
 
@@ -467,7 +535,7 @@ img {
         display: none;
     }
 
-    .content{
+    .content {
         margin-bottom: 30px;
         min-height: 438px;
     }
@@ -492,55 +560,55 @@ img {
         line-height: 20px;
     }
 
-    .content__image-date{
+    .content__image-date {
         left: 10px;
         top: 108px;
         display: flex;
         justify-content: flex-start;
     }
 
-    .content__image-clock-icon{
+    .content__image-clock-icon {
         display: block;
     }
 
-    .added-word{
+    .added-word {
         display: none;
     }
 
-    .show-more{
+    .show-more {
         height: 44px;
         margin-bottom: 30px;
     }
 
-    .show-more__button{
+    .show-more__button {
         height: 44px;
     }
 
-    .show-more__arrow{
+    .show-more__arrow {
         margin: auto 0px;
         margin-left: 80px;
         margin-right: 14px;
     }
 
-    .show-more__text{
+    .show-more__text {
         margin: auto 0px;
         font-size: 14px;
     }
 
-    .footer-hline-container{
+    .footer-hline-container {
         margin-bottom: 20px;
     }
 
-    .hline{
+    .hline {
         margin-bottom: 20px;
     }
 
-    .footer{
+    .footer {
         height: auto;
         margin-bottom: 20px;
     }
 
-    .footer__container{
+    .footer__container {
         width: 100%;
         height: auto;
         display: flex;
@@ -548,12 +616,12 @@ img {
         justify-content: flex-start;
     }
 
-    .footer__link{
+    .footer__link {
         margin: 20px auto;
         margin-top: 0px;
     }
 
-    .footer__info{
+    .footer__info {
         margin: 0px auto;
     }
 }
