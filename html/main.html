@@ -8,6 +8,7 @@
     <title>PhotoGallery</title>
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/placeholders.js"></script>
 </head>
 
 <body>
@@ -257,6 +258,7 @@
     <div class="form">
         <div class="form__background"></div>
         <div class="form__window">
+
             <div class="form__window__change-mode">
                 <button class="change-mode__button change-mode__button__registration change-mode__button__active">
                     Регистрация
@@ -264,6 +266,21 @@
                 <button class="change-mode__button change-mode__button__autorization change-mode__button__unactive">
                     Авторизация
                 </button>
+            </div>
+
+            <div class="registration__form">
+                <form action="" method="post">
+                    <div class="registration-inputs__container">
+                        <div class="registration__name">
+                            <label class="input__label">
+                                <input type="text" class="form__input registration__name__input">
+                                <p class="form__placeholder">
+                                    Ваше имя
+                                </p>
+                            </label>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

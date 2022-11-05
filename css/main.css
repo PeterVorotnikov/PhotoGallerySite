@@ -1,8 +1,4 @@
 * {
-    box-sizing: border-box;
-}
-
-* {
     font-family: 'Inter';
     font-style: normal;
     margin: 0px;
@@ -17,6 +13,10 @@
 
 a:focus {
     outline: dashed 2px white;
+}
+
+input:focus {
+    outline: none;
 }
 
 button {
@@ -435,18 +435,87 @@ img {
     height: 39px;
 }
 
-.change-mode__button__registration{
+.change-mode__button__registration {
     margin-right: 30px;
 }
 
-.change-mode__button__active{
+.change-mode__button__active {
     color: #181818;
 }
 
-.change-mode__button__unactive{
+.change-mode__button__unactive {
     color: #B9B9B9;
 }
 
+
+.registration-inputs__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    max-width: 520px;
+}
+
+.registration__name {
+    position: relative;
+    width: 520px;
+    height: 60px;
+    border: 2px solid #B9B9B9;
+    border-radius: 10px;
+}
+
+.form__placeholder {
+    transition-duration: 0.5s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    user-select: none;
+    width: 480px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #b9b9b9;
+}
+
+.form__placeholder__mini {
+    transition-duration: 0.5s;
+    width: 58px;
+    height: 15px;
+    left: 20px;
+    top: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.input__label {
+    position: absolute;
+    cursor: text;
+    top: 0px;
+    left: 0px;
+    width: 520px;
+    height: 60px;
+}
+
+.registration__name__input {
+    width: 480px;
+    height: 20px;
+    margin: 10px 20px;
+    margin-top: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    background: transparent;
+}
 
 
 
