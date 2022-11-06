@@ -497,6 +497,9 @@ img {
     font-size: 12px;
     line-height: 15px;
 }
+.form__placeholder__error{
+    color: #F35613;
+}
 
 .input__label {
     position: absolute;
@@ -555,6 +558,13 @@ img {
     border-radius: 10px;
 }
 
+.registration__not-empty{
+    border-color: #9747FF;
+}
+.registration__error{
+    border-color: #F35613;
+}
+
 
 .agree {
     display: flex;
@@ -600,7 +610,8 @@ img {
 }
 
 
-.submit {
+.registration__submit {
+    cursor: pointer;
     width: 520px;
     height: 60px;
     background: #9747FF;
@@ -612,11 +623,6 @@ img {
 .submit__unactive {
     opacity: 0.3;
     cursor: default;
-}
-
-.submit__active {
-    opacity: 1;
-    cursor: pointer;
 }
 
 .submit__text {
