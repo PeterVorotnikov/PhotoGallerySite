@@ -571,19 +571,19 @@ img {
     cursor: pointer;
 }
 
-.agree__checkbox{
+.agree__checkbox {
     display: none;
 }
 
-.agree__checkbox__background{
+.agree__checkbox__background {
     background: url(../img/checkbox_unactive.svg);
 }
 
-.agree__checkbox:checked + .agree__checkbox__background{
+.agree__checkbox:checked+.agree__checkbox__background {
     background: url(../img/checkbox_active.svg);
 }
 
-.agree__checkbox__background{
+.agree__checkbox__background {
     width: 20px;
     height: 20px;
 }
@@ -626,6 +626,29 @@ img {
     line-height: 20px;
     color: white;
     text-align: center;
+}
+
+
+.registration__info {
+    margin: 0px 130px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.registration__info__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background: url(../img/info_gray.svg);
+}
+
+.registration__info__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #838383;
 }
 
 
