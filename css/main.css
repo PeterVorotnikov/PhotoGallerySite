@@ -399,6 +399,7 @@ img {
     top: 0px;
     width: 100%;
     height: 100%;
+    display: none;
 }
 
 .form__background {
@@ -438,6 +439,7 @@ img {
     line-height: 39px;
     width: 208px;
     height: 39px;
+    color: #B9B9B9;
 }
 
 .change-mode__button__registration {
@@ -448,8 +450,14 @@ img {
     color: #181818;
 }
 
-.change-mode__button__unactive {
-    color: #B9B9B9;
+
+
+.registration__form{
+    display: block;
+}
+
+.login__form{
+    display: none;
 }
 
 
@@ -465,12 +473,24 @@ img {
     max-width: 520px;
 }
 
+.login-inputs__container{
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: 60px;
+    column-gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
 .registration__name {
     position: relative;
     grid-column: span 2;
     border: 2px solid #B9B9B9;
     border-radius: 10px;
 }
+
 
 .form__placeholder {
     transition-duration: 0.5s;
@@ -539,6 +559,12 @@ img {
     border-radius: 10px;
 }
 
+.login__email{
+    position: relative;
+    border: 2px solid #B9B9B9;
+    border-radius: 10px;
+}
+
 
 .registration__phone {
     position: relative;
@@ -547,6 +573,12 @@ img {
 }
 
 .registration__pass {
+    position: relative;
+    border: 2px solid #B9B9B9;
+    border-radius: 10px;
+}
+
+.login__pass{
     position: relative;
     border: 2px solid #B9B9B9;
     border-radius: 10px;
@@ -561,7 +593,16 @@ img {
 .registration__not-empty{
     border-color: #9747FF;
 }
+
+.login__not-empty{
+    border-color: #9747FF;
+}
+
 .registration__error{
+    border-color: #F35613;
+}
+
+.login__error{
     border-color: #F35613;
 }
 
@@ -611,6 +652,16 @@ img {
 
 
 .registration__submit {
+    cursor: pointer;
+    width: 520px;
+    height: 60px;
+    background: #9747FF;
+    border-radius: 10px;
+    margin: 0px 40px;
+    margin-bottom: 30px;
+}
+
+.login__submit{
     cursor: pointer;
     width: 520px;
     height: 60px;
