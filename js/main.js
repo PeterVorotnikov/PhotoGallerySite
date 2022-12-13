@@ -43,6 +43,63 @@ window.onload = function () {
 
     registrationCheckbox.onclick = checkRegistrationFields;
 
+	registrationSubmitButton.onclick = function(e){
+		e.preventDefault();
+		let nameInput = document.querySelector(".registration__name__input");
+		let emailInput = document.querySelector(".registration__email__input");
+		let phoneInput = document.querySelector(".registration__phone__input");
+		let passInput = document.querySelector(".registration__pass__input");
+		let passCheckInput = document.querySelector(".registration__pass-check__input");
+
+		let nameFound = /^[a-zA-Z0-9]+$/;
+		let emailFound = /^[a-zA-Z0-9]+@[a-zA-Z]+$/;
+		let phoneFound = /^\+?[0-9]{10}$/;
+		let passFound = /^.{6,}$/;
+
+		let isOk = true;
+
+		if(!nameFound.test(nameInput.value)){
+			isOk = false;
+			document.querySelector(".registration__name").classList.add("registration__error");
+			isOk = true;
+		}
+		else{
+			document.querySelector(".registration__name").classList.remove("registration__error");
+		}
+
+		if(!emailFound.test(emailInput.value)){
+			isOk = false;
+			document.querySelector(".registration__email").classList.add("registration__error");
+		}
+		else{
+			document.querySelector(".registration__email").classList.remove("registration__error");
+		}
+
+		if(!phoneFound.test(phoneInput.value)){
+			isOk = false;
+			document.querySelector(".registration__phone").classList.add("registration__error");
+		}
+		else{
+			document.querySelector(".registration__phone").classList.remove("registration__error");
+		}
+
+		if(!passFound.test(passInput.value)){
+			isOk = false;
+			document.querySelector(".registration__pass").classList.add("registration__error");
+		}
+		else{
+			document.querySelector(".registration__pass").classList.remove("registration__error");
+		}
+
+		if(passCheckInput.value != passInput.value){
+			isOk = false;
+			document.querySelector(".registration__pass-check").classList.add("registration__error");
+		}
+		else{
+			document.querySelector(".registration__pass-check").classList.remove("registration__error");
+		}
+	}
+
 
 
     loginInputs = document.querySelectorAll(".login__form__input");
