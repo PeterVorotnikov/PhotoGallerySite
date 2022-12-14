@@ -11,6 +11,21 @@
     <script type="text/javascript" src="../js/main.js"></script>
 </head>
 
+<?php
+
+require_once("config.php");
+
+try{
+	$conn = new PDO("pgsql:host=localhost;dbname=" . $dbname, $username, $password);
+	echo "Ok";
+	$conn = null;
+}
+catch(Exception $e){
+	echo $e->getMessage();
+}
+
+?>
+
 <body>
     <header>
         <div class="header">
