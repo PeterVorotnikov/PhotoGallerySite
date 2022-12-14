@@ -132,6 +132,34 @@ window.onload = function () {
             checkLoginFields();
         }
     }
+	
+	loginSubmitButton.onclick = function(e){
+		e.preventDefault();
+
+		let emailInput = document.querySelector(".login__email__input");
+		let passInput = document.querySelector(".login__pass__input");
+
+		let emailFound = /^[a-zA-Z0-9]+@[a-zA-Z]+$/;
+		let passFound = /^.{6,}$/;
+
+		let isOk = true;
+
+		if(!emailFound.test(emailInput.value)){
+			document.querySelector(".login__email").classList.add("login__error");
+			isOk = false;
+		}
+		else{
+			document.querySelector(".login__email").classList.remove("login__error");
+		}
+
+		if(!passFound.test(passInput.value)){
+			document.querySelector(".login__pass").classList.add("login__error");
+			isOk = false;
+		}
+		else{
+			document.querySelector(".login__pass").classList.remove("login__error");
+		}
+	}
 
 
 
