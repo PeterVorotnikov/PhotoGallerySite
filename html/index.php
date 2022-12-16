@@ -15,14 +15,7 @@
 
 require_once("config.php");
 
-try{
-	$conn = new PDO("pgsql:host=localhost;dbname=" . $dbname, $username, $password);
-	echo "Ok";
-	$conn = null;
-}
-catch(Exception $e){
-	echo $e->getMessage();
-}
+$months = array('января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря');
 
 ?>
 
@@ -79,6 +72,17 @@ catch(Exception $e){
             <div class="wrapper">
                 <div class="content__container">
     
+<?php
+
+try{
+	$conn = new PDO("pgsql:host=localhost;dbname=" . $dbname, $username, $password);
+}
+catch(Exception $e){
+	echo $e->getMessage();
+}
+
+?>
+
                     <button class="content__element">
                         <img class="content__image" src="../img/images/image 1.png" alt="Фото не найдено" />
                         <p class="content__image-name">
@@ -141,11 +145,12 @@ catch(Exception $e){
             </div>
 
             <div class="registration__form">
-                <form action="" method="post">
+                <form id="reg-form" action="" method="post">
                     <div class="registration-inputs__container">
+						<input type="hidden" name="type" value="registration">
                         <div class="registration__name">
                             <label class="input__label input__label__big">
-                                <input type="text" class="form__input registration__form__input form__input__big registration__name__input">
+                                <input name="name" type="text" class="form__input registration__form__input form__input__big registration__name__input">
                                 <p class="form__placeholder registration__placeholder">
                                     Ваше имя
                                 </p>
@@ -154,7 +159,7 @@ catch(Exception $e){
 
                         <div class="registration__email">
                             <label class="input__label">
-                                <input type="text" class="form__input registration__form__input registration__email__input">
+                                <input name="email" type="text" class="form__input registration__form__input registration__email__input">
                                 <p class="form__placeholder registration__placeholder">
                                     Email
                                 </p>
@@ -163,7 +168,7 @@ catch(Exception $e){
 
                         <div class="registration__phone">
                             <label class="input__label">
-                                <input type="text" class="form__input registration__form__input registration__phone__input">
+                                <input name="phone" type="text" class="form__input registration__form__input registration__phone__input">
                                 <p class="form__placeholder registration__placeholder">
                                     Мобильный телефон
                                 </p>
@@ -172,7 +177,7 @@ catch(Exception $e){
 
                         <div class="registration__pass">
                             <label class="input__label">
-                                <input type="password" class="form__input registration__form__input registration__pass__input">
+                                <input name="pass" type="password" class="form__input registration__form__input registration__pass__input">
                                 <p class="form__placeholder registration__placeholder">
                                     Пароль
                                 </p>
@@ -181,7 +186,7 @@ catch(Exception $e){
 
                         <div class="registration__pass-check">
                             <label class="input__label">
-                                <input type="password" class="form__input registration__form__input registration__pass-check__input">
+                                <input name="checkPass" type="password" class="form__input registration__form__input registration__pass-check__input">
                                 <p class="form__placeholder registration__placeholder">
                                     Повторите пароль
                                 </p>
@@ -216,11 +221,12 @@ catch(Exception $e){
             </div>
 
             <div class="login__form">
-                <form action="" method="post">
+                <form id="log-form" action="" method="post">
                     <div class="login-inputs__container">
+						<input type="hidden" name="type" value="login">
                         <div class="login__email">
                             <label class="input__label">
-                                <input type="text" class="form__input login__form__input login__email__input">
+                                <input name="email" type="text" class="form__input login__form__input login__email__input">
                                 <p class="form__placeholder login__placeholder">
                                     Email
                                 </p>
@@ -229,7 +235,7 @@ catch(Exception $e){
 
                         <div class="login__pass">
                             <label class="input__label">
-                                <input type="password" class="form__input login__form__input login__pass__input">
+                                <input name="pass" type="password" class="form__input login__form__input login__pass__input">
                                 <p class="form__placeholder login__placeholder">
                                     Пароль
                                 </p>

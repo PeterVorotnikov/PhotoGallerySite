@@ -43,7 +43,7 @@ window.onload = function () {
 
     registrationCheckbox.onclick = checkRegistrationFields;
 
-	registrationSubmitButton.onclick = function(e){
+	document.querySelector("#reg-form").onsubmit = function(e){
 		e.preventDefault();
 		let nameInput = document.querySelector(".registration__name__input");
 		let emailInput = document.querySelector(".registration__email__input");
@@ -98,6 +98,15 @@ window.onload = function () {
 		else{
 			document.querySelector(".registration__pass-check").classList.remove("registration__error");
 		}
+		
+
+		if(isOk == true){
+			let regFields = new FormData(e.currentTarget);
+			let regDataObject = Object.fromEntries(regFields.entries());
+			let regDataJson = JSON.stringify(regDataObject);
+
+			console.log(regDataJson);
+		}
 	}
 
 
@@ -133,7 +142,7 @@ window.onload = function () {
         }
     }
 	
-	loginSubmitButton.onclick = function(e){
+	document.querySelector("#log-form").onsubmit = function(e){
 		e.preventDefault();
 
 		let emailInput = document.querySelector(".login__email__input");
@@ -158,6 +167,14 @@ window.onload = function () {
 		}
 		else{
 			document.querySelector(".login__pass").classList.remove("login__error");
+		}
+
+		if(isOk == true){
+			let logFields = new FormData(e.currentTarget);
+			let logDataObject = Object.fromEntries(logFields.entries());
+			let logDataJson = JSON.stringify(logDataObject);
+
+			console.log(logDataJson);
 		}
 	}
 
