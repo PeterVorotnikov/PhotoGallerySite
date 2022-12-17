@@ -105,7 +105,9 @@ window.onload = function () {
 			let regDataObject = Object.fromEntries(regFields.entries());
 			let regDataJson = JSON.stringify(regDataObject);
 
-			console.log(regDataJson);
+			let request = new XMLHttpRequest();
+			request.open("POST", "../html/accounts.php", true);
+			request.send(regDataJson);
 		}
 	}
 
@@ -174,7 +176,9 @@ window.onload = function () {
 			let logDataObject = Object.fromEntries(logFields.entries());
 			let logDataJson = JSON.stringify(logDataObject);
 
-			console.log(logDataJson);
+			let request = new XMLHttpRequest();
+			request.open("POST", "../html/accounts.php", true);
+			request.send(logDataJson);
 		}
 	}
 
