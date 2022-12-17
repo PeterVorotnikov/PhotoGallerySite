@@ -107,7 +107,9 @@ window.onload = function () {
 
 			let request = new XMLHttpRequest();
 			request.open("POST", "../html/accounts.php", true);
-			request.send(regDataJson);
+			request.onreadystatechange = function(){
+			}
+			request.send(regFields);
 		}
 	}
 
@@ -178,7 +180,12 @@ window.onload = function () {
 
 			let request = new XMLHttpRequest();
 			request.open("POST", "../html/accounts.php", true);
-			request.send(logDataJson);
+			request.onreadystatechange = function(){
+				if(request.readyState == 4 && request.status == 200){
+					console.log(request.responseText);
+				}
+			}
+			request.send(logFields);
 		}
 	}
 
