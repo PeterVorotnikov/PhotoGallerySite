@@ -24,7 +24,18 @@
                     </div>
                     <div class="header__right">
                         <p class="header__username">
-                            <span class="hello-word">Здравствуйте, </span>Константин
+                            <span class="hello-word">Здравствуйте, </span>
+<?php
+
+session_start();
+
+if(empty($_SESSION['name']) || empty($_SESSION['email'])){
+	die();
+}
+
+echo $_SESSION['name'];
+
+?>
                         </p>
                         <button class="header__logout">
                             Выход
@@ -65,117 +76,7 @@
                 <div class="content__container">
     
                     <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 1.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            July. Summer butterflies.
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 2.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            Summer butterflies.
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 3.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            Cape Point peninsula South Africa
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 4.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            Antelope Canyon
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 5.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            Waves crashing in Brittany, France
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 6.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            After the rain
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 7.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            Milkyway trail over death valley
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 8.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            Nature
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 9.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            July. Summer butterflies.
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 10.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            Wheat period.
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 11.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            A baby jumping spider on yellow petals
-                        </p>
-                        <p class="content__image-date">
-                            Добавлено 15 августа
-                        </p>
-                    </button>
-    
-                    <button class="content__element">
-                        <img class="content__image" src="../img/example_images/image 12.png" alt="Фото не найдено" />
+                        <img class="content__image" src="../img/images/image 1.png" alt="Фото не найдено" />
                         <p class="content__image-name">
                             July. Summer butterflies.
                         </p>
