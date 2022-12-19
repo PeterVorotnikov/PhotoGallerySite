@@ -2,6 +2,8 @@
 
 require_once("config.php");
 
+session_start();
+
 if(!empty($_POST['type'])){
 	if($_POST['type'] == "registration"){
 		if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['pass']) || empty($_POST['checkPass'])){
@@ -49,7 +51,6 @@ if(!empty($_POST['type'])){
 
 				$conn = null;
 
-				session_start();
 				$_SESSION['name'] = $name;
 				$_SESSION['email'] = $email;
 				echo 'Ok';
@@ -65,6 +66,14 @@ if(!empty($_POST['type'])){
 		else{
 			echo 'Invalid form data';
 			die();
+		}
+	}
+	else if($_POST['type'] == 'session'){
+		if(!empty($_SESSION['name']) && !empty($_SESSION['email'])){
+			echo '1';
+		}
+		else{
+			echo '0';
 		}
 	}
 }

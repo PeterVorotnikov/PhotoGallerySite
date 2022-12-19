@@ -9,6 +9,22 @@ let loginSubmitButton;
 
 
 window.onload = function () {
+	let sessionRequest = new XMLHttpRequest();
+	sessionRequest.open('POST', '../html/accounts.php', true);
+	sessionRequest.onreadystatechange = function(){
+		if(sessionRequest.readyState == 4 && sessionRequest.status == 200){
+			console.log(sessionRequest.responseText);
+			if(sessionRequest.responseText == '1'){
+				window.location.replace('../html/main_login.php');
+			}
+		}
+	}
+	let sessionRequestData = new FormData();
+	sessionRequestData.append('type', 'session');
+	console.log(sessionRequestData);
+	sessionRequest.send(sessionRequestData);
+
+
     registrationInputs = document.querySelectorAll(".registration__form__input");
     registrationPlaceholders = document.querySelectorAll(".registration__placeholder");
     registrationCheckbox = document.querySelector(".agree__checkbox");
