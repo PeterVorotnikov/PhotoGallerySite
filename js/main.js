@@ -13,7 +13,6 @@ window.onload = function () {
 	sessionRequest.open('POST', '../html/accounts.php', true);
 	sessionRequest.onreadystatechange = function(){
 		if(sessionRequest.readyState == 4 && sessionRequest.status == 200){
-			console.log(sessionRequest.responseText);
 			if(sessionRequest.responseText == '1'){
 				window.location.replace('../html/main_login.php');
 			}
@@ -21,7 +20,6 @@ window.onload = function () {
 	}
 	let sessionRequestData = new FormData();
 	sessionRequestData.append('type', 'session');
-	console.log(sessionRequestData);
 	sessionRequest.send(sessionRequestData);
 
 
@@ -125,9 +123,8 @@ window.onload = function () {
 			request.open("POST", "../html/accounts.php", true);
 			request.onreadystatechange = function(){
 				if(request.readyState == 4 && request.status == 200){
-					console.log(request.responseText);
 					if(request.responseText == 'Ok'){
-						window.location.replace('html/main_login.php');
+						window.location.replace('../html/main_login.php');
 					}
 				}
 			}

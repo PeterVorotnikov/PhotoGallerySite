@@ -76,6 +76,10 @@ if(!empty($_POST['type'])){
 			echo '0';
 		}
 	}
+	else if($_POST['type'] == 'logout'){
+		unset($_SESSION['name']);
+		unset($_SESSION['email']);
+	}
 }
 
 ?>

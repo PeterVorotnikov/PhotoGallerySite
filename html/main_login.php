@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/main.css">
+	<script src='../js/main_login.js'></script>
 </head>
 
 <body>
