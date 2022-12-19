@@ -80,6 +80,56 @@ if(!empty($_POST['type'])){
 		unset($_SESSION['name']);
 		unset($_SESSION['email']);
 	}
+
+
+	else if($_POST['type'] == 'login'){
+		if(empty($_POST['email']) || empty($_POST['pass'])){
+			echo 'Invalid form data';
+			die();
+		}
+
+		$email = $_POST['email'];
+		$pass = $_POST['pass'];
+
+		try{
+			$conn = new PDO('pgsql:host=localhost;dbname=' . $dbname, $username, $password);
+
+			$loginRequest = $conn->prepare('SELECT * FROM users WHERE email = ?;');
+			$loginRequest->bindParam(1, $email, PDO::PARAM_STR);
+			$loginRequest->execute();
+
+	
+			$result = $loginRequest->fetchAll(PDO::FETCH_ASSOC);
+
+			if(count($result) > 1){
+				echo 'Count of users is not valid';
+				die();
+			}
+			if(count($result) < 1){
+				echo 'User is not exist';
+				die();
+			}
+
+			if($result[0]['pass'] != $pass){
+				echo 'Wrong password';
+				die();
+			}
+
+			$_SESSION['name'] = $result[0]['name'];
+			$_SESSION['email'] = $result[0]['email'];
+
+			$conn = null;
+
+			echo 'Ok';
+			exit();
+		}
+
+		catch(Exception $e){
+			echo 'Failed connecting';
+			die();
+		}
+
+	}
 }
 
 ?>

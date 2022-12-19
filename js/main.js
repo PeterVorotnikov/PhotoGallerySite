@@ -201,7 +201,9 @@ window.onload = function () {
 			request.open("POST", "../html/accounts.php", true);
 			request.onreadystatechange = function(){
 				if(request.readyState == 4 && request.status == 200){
-					console.log(request.responseText);
+					if(request.responseText == 'Ok'){
+						window.location.replace('../html/main_login.php');
+					}
 				}
 			}
 			request.send(logFields);
