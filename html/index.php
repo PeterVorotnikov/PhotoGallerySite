@@ -76,6 +76,32 @@ $months = array('января', 'февраля', 'марта', 'апреля', 
 
 try{
 	$conn = new PDO("pgsql:host=localhost;dbname=" . $dbname, $username, $password);
+
+	$photosRequest = $conn->prepare('SELECT name, url, EXTRACT (DAY FROM date_of_creating) AS day, EXTRACT (MONTH FROM date_of_creating) AS month, EXTRACT (YEAR FROM date_of_creating) AS year FROM photos ORDER BY date_of_creating DESC;');
+	$photosRequest->execute();
+
+	while($photosResult = $photosRequest->fetch(PDO::FETCH_ASSOC)){
+?>
+
+<button class="content__element">
+<img class="content__image" src="<?php echo $photosResult['url']; ?>" alt="Фото не найдено" />
+                        <p class="content__image-name">
+<?php echo $photosResult['name']; ?>
+                        </p>
+                        <div class="content__image-date">
+                            <div class="content__image-clock-icon"></div>
+                            <p>
+							<span class="added-word">Добавлено</span> <?php echo $photosResult['day']; echo ' '; echo $months[(int)$photosResult['month'] - 1]; ?> 
+                            </p>
+                        </div>
+                    </button>
+
+
+<?php
+	}
+
+
+	$conn = null;
 }
 catch(Exception $e){
 	echo $e->getMessage();
@@ -83,19 +109,7 @@ catch(Exception $e){
 
 ?>
 
-                    <button class="content__element">
-                        <img class="content__image" src="../img/images/image 1.png" alt="Фото не найдено" />
-                        <p class="content__image-name">
-                            July. Summer butterflies.
-                        </p>
-                        <div class="content__image-date">
-                            <div class="content__image-clock-icon"></div>
-                            <p>
-                                <span class="added-word">Добавлено</span> 15 августа
-                            </p>
-                        </div>
-                    </button>
-    
+                        
                 </div>
             </div>
         </div>
