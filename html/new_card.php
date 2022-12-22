@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photogallery</title>
     <link rel="stylesheet" href="../css/new_card.css">
+	<link rel="stylesheet" href="../css/font.css">
+	<script src='../js/new_card.js'></script>
 </head>
 
 <body>
